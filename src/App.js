@@ -1,10 +1,17 @@
 import React from "react";
-import 'assets/scss/style.scss'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import "assets/scss/style.scss";
+import LandingPages from "pages/LandingPages"; // Sesuaikan jalur impor jika perlu
 
 function App() {
   return (
     <div className="App">
-      hai
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPages />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
